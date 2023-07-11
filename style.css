@@ -1,18 +1,44 @@
 * {
 	background-color: rgb(34, 135, 224);
 }
-
+ul,
+li {
+	list-style-type: none;
+}
 .container {
 	display: grid;
 	grid-template-columns: 1fr 5fr;
+	grid-template-rows: 175px 1fr;
+	width: 100%;
+	height: 100%;
+	grid-template-areas:
+		"sidebar header header header header"
+		"sidebar main-content main-content main-content main-content";
 }
 
 .header {
 	background-color: coral;
+	width: 100%;
+	height: px;
+	grid-area: header;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
 }
+.header > .top {
+	background-color: crimson;
+	width: 50px;
+	height: 30px;
+}
+
 .sidebar {
 	background-color: deeppink;
+	width: 100%;
+	height: 900px;
+	grid-area: sidebar;
 }
 .main-content {
 	background-color: palegreen;
+	width: 100%;
+	height: px;
+	grid-area: main-content;
 }
