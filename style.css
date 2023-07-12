@@ -22,12 +22,25 @@ li {
 	height: px;
 	grid-area: header;
 	display: grid;
-	grid-template-columns: 2fr 1fr;
+	grid-template-areas:
+		"top"
+		"bottom"
+		"bottom";
+}
+
+.header > * {
+	border: 1px solid red;
 }
 .header > .top {
 	background-color: crimson;
-	width: 50px;
-	height: 30px;
+	grid-area: top;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+}
+.header > .bottom {
+	grid-area: bottom;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
 }
 
 .sidebar {
@@ -35,6 +48,9 @@ li {
 	width: 100%;
 	height: 900px;
 	grid-area: sidebar;
+}
+.sidebar > * {
+	border: 1px solid red;
 }
 .main-content {
 	background-color: palegreen;
