@@ -1,5 +1,4 @@
 * {
-	background-color: rgb(34, 135, 224);
 }
 ul,
 li {
@@ -22,6 +21,7 @@ li {
 	height: px;
 	grid-area: header;
 	display: grid;
+
 	grid-template-areas:
 		"top"
 		"bottom"
@@ -42,7 +42,31 @@ li {
 	display: grid;
 	grid-template-columns: 2fr 1fr;
 }
+.welcome {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+.welcome img {
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+}
 
+.header-content {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.header-content button {
+	border-radius: 8px;
+	border: 0px;
+	padding: 8px 16px;
+	background-color: rgba(68, 153, 228);
+	color: white;
+	font-weight: 600;
+	font-size: 14px;
+}
 .sidebar {
 	background-color: deeppink;
 	width: 100%;
@@ -57,4 +81,55 @@ li {
 	width: 100%;
 	height: px;
 	grid-area: main-content;
+	display: grid;
+
+	grid-template-columns: 2fr 1fr;
+}
+
+.projects {
+	display: grid;
+	place-items: center;
+	gap: 16px;
+	grid-template-columns: 1fr 1fr;
+	padding: 12px;
+}
+.project-container {
+	background-color: white;
+	border-radius: 8px;
+	padding: 16px;
+}
+
+.side-content {
+	display: grid;
+	gap: 32px;
+	grid-template-rows: 1fr 1fr;
+}
+
+.announcements {
+	display: grid;
+	place-items: center;
+	grid-template-rows: 1fr 1fr 1fr;
+}
+.announcement-container {
+	background-color: white;
+	border-radius: 8px;
+	padding: 16px;
+}
+.trending {
+	display: grid;
+	place-items: center;
+	grid-template-rows: 1fr 1fr 1fr;
+}
+.trending-container {
+	background-color: white;
+	border-radius: 8px;
+	padding: 16px;
+	display: flex;
+	gap: 30px;
+	align-items: center;
+}
+.trending-container img {
+	border-radius: 50%;
+	width: 48px;
+	height: 48px;
 }
