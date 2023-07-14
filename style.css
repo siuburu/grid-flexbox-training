@@ -37,6 +37,11 @@ li {
 	display: grid;
 	grid-template-columns: 2fr 1fr;
 }
+.header > .top img {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+}
 .header > .bottom {
 	grid-area: bottom;
 	display: grid;
@@ -59,7 +64,7 @@ li {
 	align-items: center;
 }
 .header-content button {
-	border-radius: 8px;
+	border-radius: 36px;
 	border: 0px;
 	padding: 8px 16px;
 	background-color: rgba(68, 153, 228);
