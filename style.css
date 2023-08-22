@@ -1,3 +1,65 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+	margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+	isolation: isolate;
+}
 * {
 	font-family: "Roboto", sans-serif;
 }
@@ -17,9 +79,9 @@ li {
 }
 
 .header {
-	background-color: coral;
+	background-color: white;
 	width: 100%;
-	height: px;
+	padding: 0 16px;
 	grid-area: header;
 	display: grid;
 
@@ -28,15 +90,31 @@ li {
 		"bottom"
 		"bottom";
 }
-
-.header > * {
-	border: 1px solid red;
+.search {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
 }
+.search #searchInput {
+	flex: 1;
+	border-radius: 32px;
+	border-style: none;
+	background-color: #d6d6d6;
+}
+
 .header > .top {
-	background-color: crimson;
+	background-color: rgb(255, 254, 254);
 	grid-area: top;
 	display: grid;
 	grid-template-columns: 2fr 1fr;
+	font-size: 1em;
+	font-weight: bolder;
+}
+.user-info {
+	display: flex;
+	gap: 24px;
+	align-items: center;
+	justify-content: center;
 }
 .header > .top img {
 	width: 48px;
@@ -48,10 +126,25 @@ li {
 	display: grid;
 	grid-template-columns: 2fr 1fr;
 }
+.header-content button {
+	border-radius: 36px;
+}
 .welcome {
 	display: flex;
 	align-items: center;
 	gap: 12px;
+}
+.welcome div {
+	display: flex;
+	flex-direction: column;
+}
+.welcome div :nth-child(1) {
+	font-size: 0.8em;
+	font-weight: bold;
+}
+.welcome div :nth-child(2) {
+	font-size: 1.4em;
+	font-weight: bolder;
 }
 .welcome img {
 	border-radius: 50%;
@@ -74,13 +167,17 @@ li {
 	font-size: 14px;
 }
 .sidebar {
+	display: flex;
+	flex-direction: column;
+	gap: 48px;
 	background-color: deeppink;
 	width: 100%;
-	height: 900px;
 	grid-area: sidebar;
 	color: whitesmoke;
 	font-size: 20px;
 	font-weight: 700;
+	box-shadow: 3px 0 5px -2px #000;
+	z-index: 1;
 }
 .sidebar > * {
 	border: 1px solid red;
@@ -89,6 +186,8 @@ li {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+	width: 36px;
+	height: 36px;
 	gap: 20px;
 }
 .menu ul,
@@ -100,6 +199,13 @@ li {
 	align-items: flex-start;
 	gap: 8px;
 }
+.menu li,
+.submenu li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 12px;
+}
 .menu img,
 .submenu img {
 	width: 16px;
@@ -108,26 +214,35 @@ li {
 .main-content {
 	background-color: palegreen;
 	width: 100%;
-	height: px;
 	grid-area: main-content;
 	display: grid;
-
+	place-items: ;
 	grid-template-columns: 2fr 1fr;
 }
 
 .projects {
-	display: grid;
-	place-items: center;
+	display: flex;
+	flex-wrap: wrap;
 	gap: 16px;
-	grid-template-columns: 1fr 1fr;
-	padding: 12px;
+	padding: 0 12px;
 }
 .project-container {
+	flex: 1;
 	background-color: white;
+	min-width: 300px;
 	border-radius: 8px;
 	padding: 16px;
 }
-
+.project-buttons {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	justify-content: flex-end;
+}
+.project-buttons img {
+	height: 16px;
+	width: 16px;
+}
 .side-content {
 	display: grid;
 	gap: 32px;
@@ -135,9 +250,8 @@ li {
 }
 
 .announcements {
-	display: grid;
-	place-items: center;
-	grid-template-rows: 1fr 1fr 1fr;
+	display: flex;
+	flex-direction: column;
 }
 .announcement-container {
 	background-color: white;
@@ -145,9 +259,9 @@ li {
 	padding: 16px;
 }
 .trending {
-	display: grid;
-	place-items: center;
-	grid-template-rows: 1fr 1fr 1fr;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
 }
 .trending-container {
 	background-color: white;
