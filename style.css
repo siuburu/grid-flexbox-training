@@ -253,8 +253,12 @@ li {
 .announcements {
 	display: flex;
 	flex-direction: column;
+	gap: 8px;
 }
 .announcement-container {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
 	background-color: white;
 	border-radius: 8px;
 	padding: 16px;
@@ -270,6 +274,7 @@ li {
 	border-radius: 8px;
 	padding: 16px;
 	display: flex;
+	flex-wrap: wrap;
 	gap: 30px;
 	align-items: center;
 	box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
