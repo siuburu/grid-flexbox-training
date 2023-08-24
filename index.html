@@ -18,12 +18,15 @@
         <header class="header">
             <header class="top">
                 <div class="search">
-                    <label for="searchInput">🔎</label>
-                    <input type="search" name="searchInput" id="searchInput">
+                    <form action="#" class="search">
+
+                        <img src="img/magnifying-glass.png" alt="" width="16" height="16">
+                        <input type="text" id="searchInput" name="searchInput" placeholder="Search...">
+
                 </div>
                 <div class="user-info">
-                    <span>🧉</span>
-                    <img src="img/profile3.jpg" alt="">
+                    <img src="img/notification.png" alt="" class="icon">
+                    <img src="img/profile3.jpg" alt="" class="profilePic">
                     <span> Username </span>
                 </div>
             </header>
@@ -67,11 +70,11 @@
         </nav>
         <div class="main-content">
             <div class="flex-projects">
-                <span>Your Projects</span>
                 <div class="projects">
+                    <span class="title">Your Projects</span>
                     <div class="project-container">
                         <span class="title">Project name</span>
-                        <br>
+
                         <span class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Praesent ut laoreet neque. Aliquam ullamcorper finibus dapibus.
                             Orci varius natoque penatibus.</span>
@@ -83,7 +86,7 @@
                     </div>
                     <div class="project-container">
                         <span class="title">Project name</span>
-                        <br>
+
                         <span class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tortor
                             eros, pulvinar a diam id, rutrum auctor arcu. Nullam
                             velit.</span>
@@ -95,7 +98,6 @@
                     </div>
                     <div class="project-container">
                         <span class="title">Project name</span>
-                        <br>
                         <span class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ante
                             arcu, euismod a tortor vitae, bibendum hendrerit
                             justo. Nullam accumsan.</span>
@@ -107,7 +109,7 @@
                     </div>
                     <div class="project-container">
                         <span class="title">Project name</span>
-                        <br>
+
                         <span class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dui
                             tellus, luctus a vulputate sit amet, tincidunt in
                             sapien. Donec.</span>
@@ -119,7 +121,7 @@
                     </div>
                     <div class="project-container">
                         <span class="title">Project name</span>
-                        <br>
+
                         <span class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac purus
                             non augue sagittis tempor et sit amet nunc. Nunc.</span>
                         <div class="project-buttons">
@@ -130,7 +132,7 @@
                     </div>
                     <div class="project-container">
                         <span class="title">Project name</span>
-                        <br>
+
                         <span class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel semper
                             metus. Nullam congue rhoncus enim. Curabitur
                             justo justo, hendrerit.</span>
@@ -144,52 +146,62 @@
             </div>
             <div class="side-content">
                 <div class="announcements">
-                    <span>Announcements</span>
+                    <span class="title">Announcements</span>
                     <div class="announcement-container">
-                        <span class="title">Announcement name</span>
-                        <br>
-                        <span class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel semper
-                            metus. Nullam congue rhoncus enim. Curabitur
-                            justo justo, hendrerit.</span>
-                    </div>
-                    <div class="announcement-container"><span class="title">Announcement name</span>
-                        <br>
-                        <span class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel semper
-                            metus. Nullam congue rhoncus enim. Curabitur
-                            justo justo, hendrerit.</span>
-                    </div>
-                    <div class="announcement-container"><span class="title">Announcement name</span>
-                        <br>
-                        <span class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel semper
-                            metus. Nullam congue rhoncus enim. Curabitur
-                            justo justo, hendrerit.</span>
+                        <div>
+                            <span class="title">Announcement name</span>
+                            <span class="description">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. In vel semper
+                                metus. Nullam congue rhoncus enim. Curabitur
+                                justo justo, hendrerit.</span>
+                        </div>
+                        <div>
+                            <span class="title">Announcement name</span>
+                            <span class="description">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. In vel semper
+                                metus. Nullam congue rhoncus enim. Curabitur
+                                justo justo, hendrerit.</span>
+                        </div>
+                        <div>
+                            <span class="title">Announcement name</span>
+                            <span class="description">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. In vel semper
+                                metus. Nullam congue rhoncus enim. Curabitur
+                                justo justo, hendrerit.</span>
+                        </div>
                     </div>
                 </div>
                 <div class="trending">
-                    <span>Trending</span>
+                    <span class="title">Trending</span>
                     <div class="trending-container">
-                        <img src="img/profile1.jpg" alt="">
-                        <span>@test<br>
-                            Project Name
-                        </span>
-                    </div>
-                    <div class="trending-container">
-                        <img src="img/profile2.jpg" alt="">
-                        <span>@test<br>
-                            Project Name
-                        </span>
-                    </div>
-                    <div class="trending-container">
-                        <img src="img/profile3.jpg" alt="">
-                        <span>@test<br>
-                            Project Name
-                        </span>
-                    </div>
-                    <div class="trending-container">
-                        <img src="img/profile4.jpg" alt="">
-                        <span>@test<br>
-                            Project Name
-                        </span>
+                        <div>
+                            <img src="img/profile1.jpg" alt="">
+                            <div>
+                                <span>@test</span>
+                                <span class="description">Project Name</span>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="img/profile2.jpg" alt="">
+                            <div>
+                                <span>@test</span>
+                                <span class="description">Project Name</span>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="img/profile3.jpg" alt="">
+                            <div>
+                                <span>@test</span>
+                                <span class="description">Project Name</span>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="img/profile4.jpg" alt="">
+                            <div>
+                                <span>@test</span>
+                                <span class="description">Project Name</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
