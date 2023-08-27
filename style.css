@@ -180,6 +180,7 @@ li {
 	font-weight: 700;
 	box-shadow: 3px 0 5px -2px #000;
 	z-index: 1;
+	padding: 0 16px 0 16px;
 }
 
 .logo {
@@ -198,6 +199,7 @@ li {
 	justify-content: center;
 	align-items: flex-start;
 	gap: 8px;
+	padding: 0 0 0 8px;
 }
 .menu li,
 .submenu li {
